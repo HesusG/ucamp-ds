@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introducción a Data Acquisition con Power BI</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins:400,700);
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+        body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+        }
+
+        h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        color: #4124BB;
+        }
+
+        h2, h3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        }
+
+        .slide-content {
+          max-width: 800px;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 80%;
+          height: auto;
+        }
+        
+        .remark-code, .remark-inline-code {
+          font-family: 'Ubuntu Mono';
+        }
+      </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Introducción a Data Acquisition con Power BI
+
+---
+
+# Elementos de Power BI
+
+En Microsoft Power BI, todas las acciones se pueden descomponer en unos pocos bloques básicos. Al comprender estos bloques, puedes crear informes complejos. Incluso las cosas aparentemente complicadas se construyen a partir de estos bloques básicos. Por ejemplo, los edificios se componen de madera, acero, concreto y vidrio, y los automóviles están hechos de metal, tela y caucho. Los edificios y los automóviles pueden ser básicos o complejos según cómo se organicen estos bloques.
+
+## Bloques Básicos
+
+- Visualizaciones
+- Conjuntos de datos
+- Informes
+- Paneles
+- Mosaicos
+
+---
+
+# Visualizaciones
+
+- Representaciones visuales de datos
+- Gráficos, mapas codificados por colores y más
+- Proporcionan contexto e información
+- Pueden ser simples o complejas
+
+![Visualizaciones de Power BI](img/visualizaciones.png)
+
+---
+
+# Conjuntos de datos
+
+- Colecciones de datos utilizadas por Power BI
+- Pueden ser simples o combinaciones de múltiples fuentes
+- Filtrar datos antes de importarlos para enfocarte en lo que te interesa
+
+![Conjuntos de datos de Power BI](img/datasets.png)
+
+---
+
+# Informes
+
+- Contienen visualizaciones y análisis de datos
+- Permiten contar historias y explorar los datos en detalle
+- Se crean a partir de conjuntos de datos y visualizaciones
+
+![Informes de Power BI](img/reportes.png)
+
+---
+
+# Paneles
+
+- Espacios de trabajo para organizar y mostrar informes y visualizaciones
+- Pueden contener múltiples informes y visualizaciones relacionadas
+
+![Paneles de Power BI](img/paneles.png)
+
+---
+
+# Mosaicos
+
+- Componentes individuales en un panel
+- Muestran una visualización específica o un resumen de datos
+
+![Mosaicos de Power BI](img/mosaicos.png)
+
+---
+
+# Power BI Apps
+
+- Una aplicación es una colección de visualizaciones y reportes predefinidos que se comparten con toda una organización.
+- Utilizar una aplicación es como calentar una cena en el microondas o pedir un menú de comida rápida: solo tienes que presionar unos botones o hacer unos comentarios, y rápidamente se te sirve una colección de platos diseñados para ir juntos, presentados en un paquete ordenado y listos para consumir.
+- Al utilizar una aplicación, Power BI se conecta a tu cuenta (después de proporcionar tus credenciales) y muestra una colección predefinida de visualizaciones y paneles en Power BI.
+- Hay aplicaciones disponibles para todo tipo de servicios en línea.
+
+---
+
+![Apps de Power BI](img/apps.png)
+
+---
+
+# Adquisición de datos en Power BI
+
+- **Importación**: 
+  - Extracción, transformación y carga de datos en Power BI.
+  - Adecuado para conjuntos de datos pequeños y actualizaciones no frecuentes.
+  - Transformación de datos durante la importación y almacenamiento en el modelo de datos de Power BI.
+
+- **DirectQuery**:
+  - Consulta directa de datos en fuentes de origen en tiempo real.
+  - No se importa ni se copia datos en el modelo de datos de Power BI.
+  - Útil para acceder a datos actualizados al instante y conjuntos de datos grandes.
+  - Transformaciones de datos realizadas en las fuentes de origen.
+
+- **Composite models**:
+  - Combinación de importación y DirectQuery en un informe.
+  - Importación y transformación de algunos datos, consulta en tiempo real para otros.
+  - Flexibilidad y eficiencia al manejar conjuntos de datos de diferentes tamaños y requerimientos.
+
+---
+# Adquisición de datos en Power BI
+
+![Adquisición de datos](img/getdata1.png)
+
+---
+# Adquisición de datos en Power BI
+
+![Adquisición de datos](img/getdata2.png)
+
+---
+
+# ETL y ELT
+
+**Relación con ETL y ELT**:
+- Importación: se asocia principalmente con ETL. Datos extraídos, transformados y cargados en Power BI. Transformación durante la importación.
+- DirectQuery: se asemeja a ELT. Datos extraídos y cargados directamente en Power BI, sin transformaciones significativas en Power BI. Transformaciones realizadas en la consulta a las fuentes de origen.
+
+![Power Query](img/etl.png)
+
+---
+
+# Power Query
+
+Power Query es una tecnología de extracción, transformación y carga (ETL) desarrollada por Microsoft. Se utiliza en aplicaciones como Power BI, Excel y Power Automate.
+
+Características principales:
+
+- Conexión a diversas fuentes de datos.
+- Transformación de datos con operaciones como filtrado, combinación, agregación, cambio de tipos, limpieza, entre otros.
+- Pasos de transformación reproducibles.
+- Automatización de actualizaciones de datos.
+
+Power Query simplifica el proceso de importación, transformación y preparación de datos para su análisis y visualización en formatos deseados.
+
+![Power Query](img/powerquery2.png)
+
+---
+
+# Power Query
+
+![Power Query](powerquery.png)
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
